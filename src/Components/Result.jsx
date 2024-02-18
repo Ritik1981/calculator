@@ -12,7 +12,7 @@ function Result() {
   }, [display, isClicked]);
 
   function calculateResult(expression) {
-    const tokens = expression.match(/\d+|\+|\-|\*|\/|\%|\^|\.|\R/g);
+    const tokens = expression.match(/\d+(\.\d+)?|\+|\-|\*|\/|\%|\^|\.|\R/g);
     const precedence = {
       "+": 1,
       "-": 1,
